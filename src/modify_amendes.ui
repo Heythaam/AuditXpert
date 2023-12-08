@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>modify_amendes</class>
+ <widget class="QDialog" name="modify_amendes">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(255,255,255);</string>
+  </property>
+  <widget class="QLineEdit" name="le_montant_u_amendes">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>160</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="le_date_u_amendes">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>210</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDateEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="supprimer_amendes">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>260</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: rgb(158,59,59);
+font: 75 9pt &quot;Arial&quot;;
+border: 2px solid rgb(158,59,59);
+border-radius: 15px;
+}
+
+QPushButton:hover {
+  color: #fff; 
+  background-color: #a63b3b; 
+  border-color: #a63b3b;
+}
+
+QPushButton:pressed {
+  color: #fff; 
+  background-color: #802c2c; 
+  border-color: #802c2c; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="appliquer_amendes">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>260</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: rgb(158,59,59);
+font: 75 9pt &quot;Arial&quot;;
+border: 2px solid rgb(158,59,59);
+border-radius: 15px;
+}
+
+QPushButton:hover {
+  color: #fff; 
+  background-color: #a63b3b; 
+  border-color: #a63b3b;
+}
+
+QPushButton:pressed {
+  color: #fff; 
+  background-color: #802c2c; 
+  border-color: #802c2c; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Modify</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_id_u_amendes">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>50</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_nom_u_amendes">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>110</y>
+     <width>131</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>20</y>
+     <width>291</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="ressources.qrc">:/new/prefix1/gfx/7495185.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>le_montant_u_amendes</zorder>
+  <zorder>le_date_u_amendes</zorder>
+  <zorder>supprimer_amendes</zorder>
+  <zorder>appliquer_amendes</zorder>
+  <zorder>le_id_u_amendes</zorder>
+  <zorder>le_nom_u_amendes</zorder>
+ </widget>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

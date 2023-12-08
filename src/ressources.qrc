@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>gfx/3459557 (1).png</file>
+        <file>gfx/5385957.png</file>
+        <file>gfx/7495185.png</file>
+        <file>gfx/ajouter.png</file>
+        <file>gfx/badge-didentite.png</file>
+        <file>gfx/boite-ouverte.png</file>
+        <file>gfx/calendar.png</file>
+        <file>gfx/case-a-cocher.png</file>
+        <file>gfx/deconnexion-alt.png</file>
+        <file>gfx/Ellipse 7.png</file>
+        <file>gfx/enveloppe-ouverte-dollar.png</file>
+        <file>gfx/Fines Management.png</file>
+        <file>gfx/left-arrow.ico</file>
+        <file>gfx/loupe.png</file>
+        <file>gfx/mail.png</file>
+        <file>gfx/menu-burger.png</file>
+        <file>gfx/pdf.png</file>
+        <file>gfx/Rectangle 6.png</file>
+        <file>gfx/right-arrow.ico</file>
+        <file>gfx/stats.png</file>
+        <file>gfx/utilisateurs-alt (1).png</file>
+        <file>gfx/logo-audit.png</file>
+        <file>gfx/3516835.png</file>
+        <file>gfx/download.png</file>
+        <file>gfx/ajouter_1.png</file>
+        <file>gfx/envoyer.png</file>
+        <file>gfx/chatbot.png</file>
+        <file>gfx/5208994.png</file>
+        <file>gfx/qr-code.png</file>
+        <file>gfx/5326009.png</file>
+        <file>gfx/image.png</file>
+        <file>gfx/4235568.png</file>
+        <file>gfx/Ligne 1.png</file>
+        <file>notification.jpg</file>
+        <file>icon_valide.png</file>
+        <file>gfx/2968290.png</file>
+        <file>gfx/arrow.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>add_produits</class>
+ <widget class="QDialog" name="add_produits">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>416</width>
+    <height>397</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(255,255,255);</string>
+  </property>
+  <widget class="QPushButton" name="b_ajouter_produits">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>360</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: rgb(158,59,59);
+font: 75 9pt &quot;Arial&quot;;
+border: 2px solid rgb(158,59,59);
+border-radius: 15px;
+}
+
+QPushButton:hover {
+  color: #fff; 
+  background-color: #a63b3b; 
+  border-color: #a63b3b; 
+}
+
+QPushButton:pressed {
+  color: #fff; 
+  background-color: #802c2c; 
+  border-color: #802c2c; 
+}</string>
+   </property>
+   <property name="text">
+    <string>ADD</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_prix_produits">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>170</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Price..</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_quantity_produits">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>240</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Quantity..</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_nom_produits">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>100</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Name..</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_id_produits">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>30</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>ID..</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>311</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="ressources.qrc">:/new/prefix1/gfx/3516835.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>b_ajouter_produits</zorder>
+  <zorder>le_prix_produits</zorder>
+  <zorder>le_quantity_produits</zorder>
+  <zorder>le_nom_produits</zorder>
+  <zorder>le_id_produits</zorder>
+ </widget>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

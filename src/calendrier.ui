@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>calendrier</class>
+ <widget class="QDialog" name="calendrier">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>773</width>
+    <height>417</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255,255,255);</string>
+  </property>
+  <widget class="QCalendarWidget" name="Calendrier">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>70</y>
+     <width>331</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#Calendrier QWidget {
+alternate-background-color: #CC3333;
+}
+
+#qt_calendar_navigationbar {
+background-color: #ffff;
+border: 2px solid #CC3333;
+border-bottom: 0px;
+border-top-left-radius:5px;
+border-top-right-radius:5px;
+color: rgb(255,255,255);}
+
+#qt_calendar_prevmonth,
+#qt_calendar_nextmonth{
+border: none;
+qproperty-icon: none;
+
+min-width: 13px;
+max-width:13px;
+min-height:13px;
+max-height:13px;
+
+border-radius:5px;
+background-color: transparent;
+padding:5px;}
+
+#qt_calendar_prevmonth{
+margin-left: 3px;}
+
+#qt_calendar_prevmonth:hover,
+#qt_calendar_nextmonth:hover{
+background-color:#FF5555}
+
+#qt_calendar_prevmonth:pressed,
+#qt_calendar_nextmonth:pressed{
+background-color:#FF5555;}
+
+
+#qt_calendar_yearbutton{
+color: #000;
+margin: 5px;
+border-radius: 5px;
+font-size: 13px;
+padding: 0 10px;}
+
+#qt_calendar_monthbutton{
+width:110px;
+color: #000;
+font-size: 13px;
+margin: 5px 0;
+border-radius:5px;
+padding: 0px 2px;}
+
+
+QCalendarWidget QAbstractItemView:enabled{
+selection-background-color: #FF5555;
+}
+
+QCalendarWidget QMenu{
+
+selection-background-color: #FF5555;}
+
+
+
+
+</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableCalendrier">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>10</y>
+     <width>261</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableView{
+border: 2px solid;
+border-color: #9B0000;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>0</y>
+     <width>621</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="ressources.qrc">:/new/prefix1/gfx/5385957.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>Calendrier</zorder>
+  <zorder>tableCalendrier</zorder>
+ </widget>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

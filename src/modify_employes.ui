@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>modify_employes</class>
+ <widget class="QDialog" name="modify_employes">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>422</width>
+    <height>434</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: white;</string>
+  </property>
+  <widget class="QLineEdit" name="age_add_employe">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>120</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Age..</string>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="time_start_add">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>330</y>
+     <width>118</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTimeEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 9px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_nom">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>70</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Nom..</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="password_add">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>220</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Password..</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_id">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>20</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>ID..</string>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="time_finish_add">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>330</y>
+     <width>118</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTimeEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 9px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_mail">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>170</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Email..</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="supprimer_clients">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>400</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: rgb(158,59,59);
+font: 75 9pt &quot;Arial&quot;;
+border: 2px solid rgb(158,59,59);
+border-radius: 15px;
+}
+
+QPushButton:hover {
+  color: #fff; 
+  background-color: #a63b3b; 
+  border-color: #a63b3b;
+}
+
+QPushButton:pressed {
+  color: #fff; 
+  background-color: #802c2c; 
+  border-color: #802c2c; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="appliquer_clients">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>400</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: rgb(158,59,59);
+font: 75 9pt &quot;Arial&quot;;
+border: 2px solid rgb(158,59,59);
+border-radius: 15px;
+}
+
+QPushButton:hover {
+  color: #fff; 
+  background-color: #a63b3b; 
+  border-color: #a63b3b;
+}
+
+QPushButton:pressed {
+  color: #fff; 
+  background-color: #802c2c; 
+  border-color: #802c2c; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Modify</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_role">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>270</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Role..</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/prefix1" lang="farncais"/>
+    <qresource prefix="/new/prefix1" lang="francais"/>
+    <qresource prefix="/">
+        <file>icon_valide.png</file>
+    </qresource>
+</RCC>

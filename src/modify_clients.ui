@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>modify_clients</class>
+ <widget class="QDialog" name="modify_clients">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>313</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: white;</string>
+  </property>
+  <widget class="QLineEdit" name="le_nom_u_clients">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>90</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Nom..</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="le_date_u_clients">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>190</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDateEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 9px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_domaine_u_clients">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>140</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Domaine..</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_id_u_clients">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>40</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+border: 1px solid;
+border-color: #9B0000;
+border-radius: 10px;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>ID..</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="appliquer_clients">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>280</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: rgb(158,59,59);
+font: 75 9pt &quot;Arial&quot;;
+border: 2px solid rgb(158,59,59);
+border-radius: 15px;
+}
+
+QPushButton:hover {
+  color: #fff; 
+  background-color: #a63b3b; 
+  border-color: #a63b3b;
+}
+
+QPushButton:pressed {
+  color: #fff; 
+  background-color: #802c2c; 
+  border-color: #802c2c; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Modify</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="supprimer_clients">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>280</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color: rgb(158,59,59);
+font: 75 9pt &quot;Arial&quot;;
+border: 2px solid rgb(158,59,59);
+border-radius: 15px;
+}
+
+QPushButton:hover {
+  color: #fff; 
+  background-color: #a63b3b; 
+  border-color: #a63b3b;
+}
+
+QPushButton:pressed {
+  color: #fff; 
+  background-color: #802c2c; 
+  border-color: #802c2c; 
+}</string>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>311</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="ressources.qrc">:/new/prefix1/gfx/3516835.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>le_nom_u_clients</zorder>
+  <zorder>le_date_u_clients</zorder>
+  <zorder>le_domaine_u_clients</zorder>
+  <zorder>le_id_u_clients</zorder>
+  <zorder>appliquer_clients</zorder>
+  <zorder>supprimer_clients</zorder>
+ </widget>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
