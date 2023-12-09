@@ -22,6 +22,9 @@ To enhance user experience, a graphical user interface (GUI) has been implemente
 
 ![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/46a7393b-b240-42d0-b46d-992788569175)
 
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/fc7a2563-53c6-4535-bf2d-938c42c09962)
+
+
 ### E-mail Functionality Integration
 
 The software seamlessly integrates e-mail functionality using the SMTP protocol. This enables automated and instantaneous communication, reinforcing the system's interactivity with users via e-mail notifications and updates. This feature enhances user engagement and ensures timely communication of important information.
@@ -30,6 +33,7 @@ The software seamlessly integrates e-mail functionality using the SMTP protocol.
 
 ![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/0c36b8c5-1593-4575-8266-337ab1564a16)
 
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/1e708198-7583-4024-aca8-ad9d35cc37e9)
 
 
 ### Oracle SQL Developer Integration
