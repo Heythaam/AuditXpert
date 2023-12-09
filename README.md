@@ -33,7 +33,6 @@ The software seamlessly integrates e-mail functionality using the SMTP protocol.
 
 ![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/0c36b8c5-1593-4575-8266-337ab1564a16)
 
-![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/1e708198-7583-4024-aca8-ad9d35cc37e9)
 
 
 ### Oracle SQL Developer Integration
