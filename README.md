@@ -32,9 +32,3 @@ Before getting started with the software, ensure you have the following prerequi
 - C++ compiler
 - Oracle SQL Developer
 
-### Installation
-
-1. Clone the repository:
-
-```bash
-
