@@ -18,7 +18,19 @@ A meticulous database design has been implemented to precisely define the struct
 
 To enhance user experience, a graphical user interface (GUI) has been implemented. The GUI not only provides a visually appealing interface but also ensures that users can interact with the software in an intuitive and efficient manner.
 
-![LOGIN_1](https://github.com/Heythaam/Projet-Qt/assets/123275074/d68052ff-651c-48d8-a090-5d531407df7b)
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/50f62e6c-02a1-45e8-af7a-4e6333cf8664)
+
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/46a7393b-b240-42d0-b46d-992788569175)
+
+### E-mail Functionality Integration
+
+The software seamlessly integrates e-mail functionality using the SMTP protocol. This enables automated and instantaneous communication, reinforcing the system's interactivity with users via e-mail notifications and updates. This feature enhances user engagement and ensures timely communication of important information.
+
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/fd107de7-1324-47b2-aa31-47e70d515150)
+
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/0c36b8c5-1593-4575-8266-337ab1564a16)
+
+
 
 ### Oracle SQL Developer Integration
 
