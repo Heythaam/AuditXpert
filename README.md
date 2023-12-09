@@ -18,6 +18,8 @@ A meticulous database design has been implemented to precisely define the struct
 
 To enhance user experience, a graphical user interface (GUI) has been implemented. The GUI not only provides a visually appealing interface but also ensures that users can interact with the software in an intuitive and efficient manner.
 
+![LOGIN_1](https://github.com/Heythaam/Projet-Qt/assets/123275074/d68052ff-651c-48d8-a090-5d531407df7b)
+
 ### Oracle SQL Developer Integration
 
 The database has been created using Oracle SQL Developer, enabling simplified management of database objects. This integration ensures the reliability and scalability of the database, contributing to the overall robustness of the control and audit software.
