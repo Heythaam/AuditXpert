@@ -18,11 +18,21 @@ A meticulous database design has been implemented to precisely define the struct
 
 To enhance user experience, a graphical user interface (GUI) has been implemented. The GUI not only provides a visually appealing interface but also ensures that users can interact with the software in an intuitive and efficient manner.
 
-![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/50f62e6c-02a1-45e8-af7a-4e6333cf8664)
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/a7874adb-9456-4b49-8dae-c2d6537b53bb)
 
-![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/46a7393b-b240-42d0-b46d-992788569175)
 
-![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/fc7a2563-53c6-4535-bf2d-938c42c09962)
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/0fc766fe-4b39-44be-8173-2ae78530ddd9)
+
+
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/925667d3-1985-48a9-b0a8-b2144fb4bdad)
+
+
+
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/37068609-6ceb-44ff-937f-ca4821cdc761)
+
+
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/ac554c8a-1ba8-4703-8664-1592698b734e)
+
 
 
 ### E-mail Functionality Integration
@@ -32,6 +42,9 @@ The software seamlessly integrates e-mail functionality using the SMTP protocol.
 ![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/fd107de7-1324-47b2-aa31-47e70d515150)
 
 ![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/0c36b8c5-1593-4575-8266-337ab1564a16)
+
+![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/0c6a6980-d576-45e8-a9ef-070748b0c67c)
+
 
 
 
