@@ -16,6 +16,10 @@
 #include "QtPrintSupport/QPrintDialog"
 #include "qr_code.h"
 #include "insert_image.h"
+#include "qrcode.h"
+#include "arduino.h"
+#include "arduino1.h"
+#include "arduino2.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -29,10 +33,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_Button_employe_clicked();
-
-    void on_Button_client_clicked();
-
     void on_Button_produits_clicked();
 
     void on_Button_normes_clicked();
@@ -173,6 +173,28 @@ private slots:
 
     void on_register_2_clicked();
 
+    //void on_pushButton_7_clicked();
+
+    //void on_pushButton_8_clicked();
+
+
+    void on_reset_password_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_reset_clicked();
+
+    void on_parking_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void update_label();
+
+
+    void on_PDF_produits_2_clicked();
+
+    void on_stats_produits_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     amendes Etmp_amendes;
@@ -185,6 +207,11 @@ private:
     modify_produits * d2;
     modify_clients * d3;
     modify_employes * d4;
+    Arduino A;
+    arduino1 A1;
+    arduino2 A2;
+
+    Product etmp;
 
 };
 #endif // MAINWINDOW_H

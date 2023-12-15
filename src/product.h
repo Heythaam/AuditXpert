@@ -3,7 +3,7 @@
 #include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
-//#include <arduino.h>
+#include <arduino.h>
 #include <QtSerialPort/QSerialPort>
 
 class Product
@@ -29,8 +29,8 @@ public:
     bool updateProduct();
     void displayInventoryColumnChart();
     bool UpdateQrcodeLink(QString qr, QString id);
-    void on_Open_clicked();
-    void on_Close_clicked();
+    void on_PDF_produits_2_clicked();
+    void on_stats_produits_2_clicked();
     QSqlQueryModel* afficherarduino();
     QSqlQueryModel * afficherTri();
 private:
@@ -38,7 +38,7 @@ private:
     QString name;
     double price;
     int quantity;
-    //Arduino A;
+    Arduino A;
 
 };
 

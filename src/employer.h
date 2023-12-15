@@ -38,6 +38,7 @@ public:
     bool supprimer(QString);
     QSqlQueryModel * rechercher(QString);
     bool search(QString,QString,QString&);
+    bool getPasswordByEmail(QString, QString&);
 private:
     int age;
     QString id,nom,poste,mail,password;

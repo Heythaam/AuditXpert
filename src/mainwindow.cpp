@@ -27,12 +27,91 @@
 #include "stats_clients.h"
 #include "stats_produits.h"
 #include "smtp.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    /*                                          PARTIE AMENDES                                          */
+    int ret=A.connect_arduino(); // lancer la connexion à arduino
+       switch(ret){
+       case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+           break;
+       case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+           break;
+       case(-1):qDebug() << "arduino is not available";
+           QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(readFromSerialPort()));
+       }
+       QTimer *timer = new QTimer(this);
+       QTimer *ref = new QTimer(this);
+
+       // Set the timeout interval (in milliseconds)
+       timer->setInterval(100);
+       ref->setInterval(2000);
+       connect(ref, &QTimer::timeout, [=](){
+           ui->tableViewarduino->setModel(etmp.afficherarduino());
+       });
+
+       // Connect the timeout() signal of the QTimer object to a lambda function
+       connect(timer, &QTimer::timeout, [=]() {
+
+
+           QByteArray data = A.readL_from_arduino();
+           QString dataString = QString::fromUtf8(data).trimmed(); // Convert the data to a QString and remove any leading/trailing white space
+           QString AZER = dataString;
+           if (AZER == "2") {
+
+               QDateTime currentDateTime = QDateTime::currentDateTime();
+               QString dateString = currentDateTime.toString(Qt::ISODate);
+
+
+                   QString in ="movement detected at :"+dateString ;
+                   QSqlQuery query;
+                   query.prepare("INSERT INTO HISTARD (HIST,OPEN) VALUES (:HIST,:OPEN)");
+                   query.bindValue(":HIST", in);
+                   query.bindValue(":OPEN", "---");
+                   ui->tableViewarduino->setModel(etmp.afficherarduino());
+
+
+
+                   if (!query.exec()) {
+                       qDebug() << "Failed to insert data into database";
+                       }
+
+
+               QMessageBox::information(this, "Car Detected", "A car has been detected!"); // Show a message box if the AZER string variable contains "car"
+               }
+
+           if (AZER=="1") {
+               QDateTime currentDateTime = QDateTime::currentDateTime();
+               QString dateString = currentDateTime.toString(Qt::ISODate);
+               QString al="car entred at"+dateString ;
+               QSqlQuery query;
+               query.prepare("INSERT INTO HISTARD (HIST,OPEN) VALUES (:HIST,:OPEN)");
+               query.bindValue(":HIST", "---");
+               query.bindValue(":OPEN", al);
+
+
+
+
+
+               if (!query.exec()) {
+                   qDebug() << "Failed to insert data into database";
+                   }
+           }
+
+       });
+       int ret1=A1.connect_arduino1(); // lancer la connexion à arduino
+       switch(ret1){
+       case(0):qDebug()<< "arduino1 is available and connected to : "<< A1.getarduino1_port_name();
+           break;
+       case(1):qDebug() << "arduino1 is available but not connected to :" <<A1.getarduino1_port_name();
+          break;
+       case(-1):qDebug() << "arduino1 is not available";
+       }
+       connect(A1.getserial(), &QSerialPort::readyRead, this, &MainWindow::update_label); // permet de lancer
+
+    /*                                          PARTIE AMENDES                                                    */
     ui->tableView_amendes->setModel(Etmp_amendes.afficher());
     ui->tableView_amendes->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->tableView_amendes->setItemDelegateForColumn(0, new NumberFormatDelegate(0, this));
@@ -65,8 +144,6 @@ MainWindow::MainWindow(QWidget *parent)
     QRegExp rx("regex");
     ui->tableView_produits->setSelectionBehavior(QAbstractItemView::SelectRows);
     QValidator *validator = new QRegExpValidator(rx, this);
-    QLineEdit *edit = new QLineEdit(this);
-    edit->setValidator(validator);
     ui->tableView_produits->setModel(Etmp_produits.displayProducts("ID"));
     ui->tableView_produits->setItemDelegateForColumn(0, new NumberFormatDelegate(0, this));
     ui->tableView_produits->setItemDelegateForColumn(2, new NumberFormatDelegate(0, this));
@@ -94,7 +171,7 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_Button_employe_clicked()
+/*void MainWindow::on_Button_employe_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
@@ -102,7 +179,7 @@ void MainWindow::on_Button_employe_clicked()
 void MainWindow::on_Button_client_clicked()
 {
    ui->stackedWidget->setCurrentIndex(1);
-}
+}*/
 
 void MainWindow::on_Button_produits_clicked()
 {
@@ -976,4 +1053,126 @@ void MainWindow::on_register_2_clicked()
               QMessageBox::critical(nullptr, QObject::tr("Error"),QObject::tr("Add Failed\n"),QMessageBox::Close);
           }
     }
+}
+
+
+void MainWindow::on_reset_password_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(7);
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+}
+
+void MainWindow::on_reset_clicked()
+{
+    QSqlQuery query;
+    QString email=ui->le_mail_reset->text();
+    QString password;
+    query.prepare("SELECT PASSWORD FROM EMPLOYES WHERE EMAIL = :email");
+    query.bindValue(":email", email);
+
+    if (query.exec() && query.next()) {
+        password = query.value("PASSWORD").toString();
+    }
+    SmtpClient smtp("smtp.gmail.com", 465, SmtpClient::SslConnection);
+
+
+        smtp.setUser("auditxpert1@gmail.com");
+        smtp.setPassword("mkuv bnja tukk pkgd");
+
+
+        MimeMessage message;
+        QString res= ui->le_mail_reset->text();
+        message.setSender(new EmailAddress("auditxpert1@gmail.com", "AuditXpert"));
+        message.addRecipient(new EmailAddress(res, "Client"));
+        message.setSubject("Account Creation Confirmation");
+
+
+        MimeText text;
+        res= "We received a request to reset the password for your AuditXpert account. If you did not make this request, you can ignore this email.\n\nTo proceed with the password reset, please use the following verification code within the AuditXpert application:\n\nVerification Code:"+password+"\n\nPlease enter this code in the provided field within the AuditXpert application to reset your password.\n\nIf you have any questions or did not request this password reset, please contact our support team.\n\nThank you,\n\n\nAuditXpert Team";
+        text.setText(res);
+
+        message.addPart(&text);
+
+
+        smtp.connectToHost();
+
+        smtp.login();
+
+        if (smtp.sendMail(message)){
+            QMessageBox::information(nullptr, QObject::tr("Email sent"),
+                                     QObject::tr("An email has been sent for more details.\n"
+                                                 "Click Cancel to exit."), QMessageBox::Cancel);
+        }
+        else{
+            QMessageBox::critical(nullptr, QObject::tr("failed"),
+                                     QObject::tr("failed!!\n"
+                                                 "Click Cancel to exit."), QMessageBox::Cancel);
+        }
+
+        smtp.quit();
+}
+
+void MainWindow::on_parking_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(1);
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(0);
+}
+
+
+void MainWindow::update_label()
+{
+    QByteArray data = A1.read_from_arduino1();
+
+    // Remove '\r' and '\n' characters from the QByteArray
+    data.replace("\r", "").replace("\n", "");
+
+    //ui->labe->setText(data);
+
+    // Print received data for debugging
+    qDebug() << "Received data from Arduino:" << data;
+
+    // Assuming tagID is encoded as hexadecimal in the Arduino code
+    QString tagID = QString::fromLatin1(data.toHex()); // Convert to hexadecimal
+
+    // Mettez à jour le texte du QLabel avec le tagID
+    A1.write_to_arduino1(data);
+    QSqlQuery query;
+    QTime Time= Time.currentTime();
+    QString id = "11455216";
+    query.prepare("UPDATE EMPLOYES SET START_TIME= :START_TIME WHERE ID_EMPLOYE = :ID_EMPLOYE");
+    query.bindValue(":ID_EMPLOYE",id);
+    query.bindValue(":START_TIME", Time);
+    query.exec();
+    ui->tableView_employe->setModel(Etmp_employes.afficher());
+}
+
+
+void MainWindow::on_PDF_produits_2_clicked()
+{
+    A.write_to_arduino("1\n");
+    QDateTime currentDateTime = QDateTime::currentDateTime();
+    QString dateString = currentDateTime.toString(Qt::ISODate);
+    QString al="car entred at"+dateString ;
+    QSqlQuery query;
+    query.prepare("INSERT INTO HISTARD (HIST,OPEN) VALUES (:HIST,:OPEN)");
+    query.bindValue(":HIST", "---");
+    query.bindValue(":OPEN", al);
+    QMessageBox::information(nullptr, QObject::tr("Door opened"),
+                             QObject::tr("Alert : Door opened \n"
+                                         "Click cancel to exit."), QMessageBox::Cancel);
+}
+void MainWindow::on_stats_produits_2_clicked()
+{
+    A.write_to_arduino("3\n");
+    QMessageBox::information(nullptr, QObject::tr("Door closed"),
+                             QObject::tr("Alert : Door closed \n"
+                                         "Click cancel to exit."), QMessageBox::Cancel);
 }

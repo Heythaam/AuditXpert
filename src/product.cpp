@@ -2,7 +2,7 @@
 #include <QtDebug>
 #include <QSqlQuery>
 #include <QtCharts>
-//#include "arduino.h"
+#include "arduino.h"
 
 Product::Product() {
     ID = 1;
@@ -174,13 +174,13 @@ bool Product::UpdateQrcodeLink(QString qr, QString id) {
     return query.exec();
 }
 
-/*void Product::on_Open_clicked()
+void Product::on_PDF_produits_2_clicked()
 {
     A.write_to_arduino("1");
 
 }
 
-void Product::on_Close_clicked()
+void Product::on_stats_produits_2_clicked()
 {
     A.write_to_arduino("2");
 
@@ -194,7 +194,7 @@ QSqlQueryModel* Product::afficherarduino()
 
 
     return model;
-}*/
+}
 
 
 QSqlQueryModel * Product::afficherTri()

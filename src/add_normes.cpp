@@ -37,7 +37,10 @@ void add_normes::on_b_ajouter_normes_clicked()
          bool test=N.ajouter();
          if(test)
          {
-             notification.notification_ajoutNorme();
+            QSystemTrayIcon trayIcon(QIcon("C:/Users/Heytham/Desktop/qt/integration_finale/notification.jpg"));
+            trayIcon.setVisible(true);
+            trayIcon.show();
+            trayIcon.showMessage("Gestion des Normes","Normes est ajouté",QSystemTrayIcon::Information,15000);
              QMessageBox::information(nullptr,QObject::tr("ok"),
                      QObject::tr("ajout effectué\n"
                                  "Click Cancel to exit."),QMessageBox::Cancel);

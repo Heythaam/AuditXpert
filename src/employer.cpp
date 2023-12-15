@@ -161,3 +161,15 @@ bool Employer::search(QString log, QString pass,  QString& poste) {
 }
 
 
+bool Employer::getPasswordByEmail(QString email, QString& password) {
+    QSqlQuery query;
+    query.prepare("SELECT PASSWORD FROM EMPLOYES WHERE EMAIL = :email");
+    query.bindValue(":email", email);
+
+    if (query.exec() && query.next()) {
+        password = query.value("PASSWORD").toString();
+        return true;
+    } else {
+        return false;
+    }
+}

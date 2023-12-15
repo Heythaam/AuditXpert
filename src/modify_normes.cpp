@@ -23,7 +23,10 @@ void modify_normes::on_b_modifier_normes_clicked()
     QDate date=ui->le_date_u_normes->date();
     Norme N(ID,type,validity,sector,date);
     if(N.modifier(ID,type,validity,sector,date)){
-        notification.notification_modifierNorme();
+        QSystemTrayIcon trayIcon(QIcon("C:/Users/Heytham/Desktop/qt/integration_finale/notification.jpg"));
+        trayIcon.setVisible(true);
+        trayIcon.show();
+        trayIcon.showMessage("Gestion des Normes","Normes est modifié",QSystemTrayIcon::Information,15000);
         QMessageBox::information(nullptr,QObject::tr("ok"),
                 QObject::tr("modification effectué\n"
                             "Click Cancel to exit."),QMessageBox::Cancel);
@@ -40,7 +43,10 @@ void modify_normes::on_b_supprimer_normes_clicked()
     QDate date=ui->le_date_u_normes->date();
     Norme N(ID,type,validity,sector,date);
     if(N.supprimer(ID)){
-        notification.notification_supprimerNorme();
+        QSystemTrayIcon trayIcon(QIcon("C:/Users/Heytham/Desktop/qt/integration_finale/notification.jpg"));
+        trayIcon.setVisible(true);
+        trayIcon.show();
+        trayIcon.showMessage("Gestion des Normes","Normes est supprimé",QSystemTrayIcon::Information,15000);
         QMessageBox::information(nullptr,QObject::tr("ok"),
                 QObject::tr("Suppression effectué\n"
                             "Click Cancel to exit."),QMessageBox::Cancel);
