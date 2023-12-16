@@ -43,7 +43,6 @@ The software seamlessly integrates e-mail functionality using the SMTP protocol.
 
 ![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/0c36b8c5-1593-4575-8266-337ab1564a16)
 
-![image](https://github.com/Heythaam/Projet-Qt/assets/123275074/0c6a6980-d576-45e8-a9ef-070748b0c67c)
 
 
 
